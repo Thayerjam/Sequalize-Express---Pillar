@@ -71,7 +71,7 @@ router.post('/', async (req, res, next) => {
   }
 })
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', async (req, res, next) => {
   try {
     const userToUpdate = await User.findById(req.params.id);
     if (userToUpdate.length > 0) {
